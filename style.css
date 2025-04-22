@@ -1,0 +1,585 @@
+* {
+margin: 0;
+padding: 0;
+}
+hr{
+    border: 2px solid ;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 12px; 
+    color: #000;
+}
+li{
+    margin: 5px 0;
+    cursor: pointer;
+}
+a, h1{
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.linhaEntreAtividades{
+    color: #c0c0c04e;
+    width: 1050px;
+    margin-left: 18%;  
+}
+.linhaDivisao{
+    color: #c0c0c04e;
+}
+.nomeVoltar{
+    color: #000;
+}
+/*Formatação do Cabeçalho*/
+.voltar{
+    color: #000;
+}
+.cabecalho{
+    background-color: #FFFFFF;
+    padding-inline: auto;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.nav-bar{
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.nav-list a{
+    font-size: 16px;
+    padding-block: 16px;
+    color: black;
+}
+/*Formatação do Modal*/
+.modalNav{
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.conteudoModal{
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 8px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 50%;
+    margin-top: 100px;   
+}
+.fechar{
+    color: #aaa;
+    float: right;
+    font-size: 38px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.fechar:hover,
+.fechar:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.itensModal{
+    margin-left: 80px;
+}
+.textoModal{
+    margin: 10px;
+    font-size: 38px;
+}
+.corpoModal{
+    margin: 10px;
+    font-size: 24px;
+}
+.paragrafosModal{
+    margin: 8px;
+    font-size: 20px;
+}
+.navButton{
+    background-color: transparent;
+    border: transparent;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.imagemPortfolio{
+    width: 85%;
+}
+/*Formatação do Modal Tecnico*/
+.modalTecnico{
+    display: none; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.conteudoModalTecnico{
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 8px;
+    border: 3px solid #7e757c1f;
+    margin-left: 700px;
+    width: 12%;
+    margin-top: 70px;   
+}
+.itensModalTecnico{
+    font-size: 15px;
+    padding: 4px;
+    color: #000;
+}
+/*Formatação do Banner*/
+.imagemFoto{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100%;    
+}
+.corpo{
+    color: #FFFFFF;
+}
+.textoTitulo1{
+    position: absolute;
+    font-size: 40px;
+    left: 250px;
+    top: 135px;
+}
+.textoCorpo1{
+    position: absolute;
+    font-size: 20px;
+    left: 250px;
+    width: 440px;
+    top: 190px;
+}
+.tituloConteudo{
+    margin: 18px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Formatação Carrossel*/
+.carrosseis{
+    margin: 50px;
+    display: flex;
+}
+.primeiroCarrossel{
+    position: relative;
+    width: 300px; 
+    margin: 0 auto;
+    overflow: hidden;
+    border: #c0c0c096 2px solid;
+    padding: 15px;
+    padding-bottom: 80px;
+}
+.segundoCarrossel{
+    position: relative;
+    width: 300px; 
+    margin: 0 auto;
+    overflow: hidden;
+    border: #c0c0c096 2px solid;
+    padding: 15px;
+    padding-bottom: 80px;
+}
+.terceiroCarrossel{
+    position: relative;
+    width: 300px; 
+    margin: 0 auto;
+    overflow: hidden;
+    border: #c0c0c096 2px solid;
+    padding: 15px;
+    padding-bottom: 80px;
+}
+.slidesFotos{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    scroll-behavior: smooth;
+    overflow: hidden; /* ocultar scroll */  
+    border: #c0c0c096 solid 2px;
+}
+.imagemCarrossel{
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.imagemCarrossel:hover {
+    transform: scale(1.03);
+}
+button.prev,
+button.next {
+    background-color: #fff;
+    align-items: center;
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+button.prev:hover,
+button.next:hover {
+    color: #a603117e;
+}
+button.prev {
+    left: 10px;
+}
+button.next {
+    right: 10px;
+}
+/*Formatação do Currículo*/
+.imagemFundo{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.documetoCurriculum{
+    padding: 20px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 150px;
+    width: 500px;
+    top: 1600px;
+}
+/*Formatação do Documento PDF*/
+.titulo{
+    color: black;
+    font-family: "Book Antiqua", serif;
+    font-size: 33pt;
+    font-weight: bold;
+}
+.s1{
+    color: black;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 8pt;
+}
+.s2{
+    color: black;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 9pt;
+}
+.s3{
+    color: black;
+    font-family: "Arial Black", sans-serif;
+    font-size: 9pt;
+}
+.s4{
+    color: #2078C7;
+    font-family: "Arial Black", sans-serif;
+    font-size: 9pt;
+}
+.descricao{
+    color: #666;
+    font-family: "Book Antiqua", serif;
+    font-size: 9pt;
+    margin: 0pt;
+}
+.s5{
+    color: black;
+    font-family: "Book Antiqua", serif;
+    font-size: 11pt;
+}
+.s7{
+    color: #666;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 8pt;
+}
+.titulos{
+    color: black;
+    font-family: "Book Antiqua", serif;
+    font-size: 11pt;
+    font-weight: bold;
+}
+.premio{
+    color: #666;
+    font-family: "Book Antiqua", serif;
+    font-size: 9pt;
+    font-weight: bold;
+}
+.letraTexto{
+    color: #FFFFFF;
+}
+.textoTitulo2{
+    position: absolute;
+    font-size: 50px;
+    left: 800px;
+    top: 1670px;
+}
+.textoCorpo2{
+    position: absolute;
+    font-size: 24px;
+    left: 800px;
+    width: 400px;
+    top: 1750px;
+}
+.botaoDownload{
+    position: absolute;
+    font-size: 38px;
+    left: 800px;
+    top: 2300px;
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid white;
+    border-radius: 40px; 
+    color: white; /* Cor do texto */
+    padding: 10px 30px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+.botaoDownload:hover{
+    background-color: white; /* Fundo branco ao passar o mouse */
+    color: black; /* Cor do texto ao passar o mouse */
+}
+/*Formatação do Rodapé*/
+.boxFlor{
+    margin-left: 40px;
+}
+.imagemFlor{
+    margin-left: 150px;
+    padding: 10px;
+    width: 25%;
+}
+.tituloTexto{
+    color: #7A7676;
+    margin-bottom: 50px;
+}
+.textoRedes{
+    margin-left: 700px;
+    margin-top: -320px;
+    font-size: 30px;
+}
+.corpoTexto{
+    color: #7A7676;
+    font-size: 25px;
+    margin: 2px;
+}
+.textosRedes{
+    width: 50px;
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Distribui o espaço entre as divs */
+}
+.divisao1, .divisao2 {
+    flex: 1; /* Faz as divs ocuparem espaço igual */
+    margin: 0 10px; /* Adiciona um espaço entre as divs */
+}
+.localRedes {
+    display: flex; /* Isso pode ser mantido se você quiser que o conteúdo dentro de localRedes fique em coluna */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+.imagensRedes{
+    width: 50px;
+    height: 50px;
+}
+/*Formatação dos Banners das telas dos conteudos*/
+.banner{
+    background-color: #000;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 550px;
+}
+/*Formação das Atividades*/
+/*Linguagens*/
+.tituloLinguagens{
+    color: #FFFFFF;
+    position: absolute;
+    font-size: 1000%;
+    left: 200px;
+    top: 210px;
+}
+.corpoLinguagens{
+    color: #FFFFFF;
+    position: absolute;
+    font-size: 40px;
+    left: 180px;
+    width: 800px;
+    top: 400px;
+}
+.imagemNota{
+    margin: 18px;
+    margin-left: 120px;
+    width: 40%;
+    height: 50%;
+    border: #7373732c solid 2px;
+    border-radius: 8px;
+}
+.atividadeLinguagens{
+    margin: 18px;
+    margin-left: 120px;
+}
+.linkAtividade{
+    margin-left: 120px;
+}
+.atividadeTitulo{
+    margin: 16px;
+    font-size: 55px;
+    margin-left: 125px;
+}
+.conteudoAtividade1{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -360px;
+    margin-bottom: 120px;
+}
+.conteudoAtividade2{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -660px;
+    margin-bottom: 250px;
+}
+.conteudoAtividade3{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -560px;
+    margin-bottom: 80px;
+}
+.atividadePadlet{
+    font-size: 21px;
+    margin: 12px;
+    margin-left: 150px;
+    width: 450px;
+}
+.conteudoAtividade4{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -660px;
+    margin-bottom: 150px;
+}
+.conteudoAtividade5{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -660px;
+    margin-bottom: 250px;
+}
+.conteudoAtividade6{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -395px;
+    margin-bottom: 25px;
+}
+.textoTituloAtividades{
+   font-size: 30px;
+}
+.textoCorpoAtividade{
+    font-size: 22px;
+    padding: 5px;
+}
+/*Humanas*/
+.atividadeHumanas{
+    margin: 18px;
+    margin-left: 120px;
+}
+.humanasAtividade1{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -395px;
+    margin-bottom: 30px;
+}
+.humanasAtividade2{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -395px;
+    margin-bottom: 20px;
+}
+/*Natureza*/
+.atividadeNaturezaTitulo{
+    margin: 16px;
+    font-size: 55px;
+    margin-left: 0px;
+}
+.atividadeNatureza{
+    margin: 18px;
+    margin-left: 120px;
+}
+.naturezaAtividade1{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -395px;
+    margin-bottom: 18px; 
+}
+.naturezaAtividade2{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -395px;
+    margin-bottom: 35px; 
+}
+.naturezaAtividade3{
+    margin-left: 52%;
+    margin-right: 10%;
+    margin-top: -395px;
+    margin-bottom: 18px;  
+}
+.naturezaAtividade4{
+    margin-left: 52%;
+    margin-right: 10%;
+    margin-top: -395px;
+    margin-bottom: 18px;  
+}
+/*Matemática*/
+.atividadeMatematica{
+    margin: 18px;
+    margin-left: 120px;
+}
+.matematicaAtividade1{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -650px;
+    margin-bottom: 220px;
+}
+.matematicaAtividade2{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -390px;
+    margin-bottom: 30px;
+}
+/*Modelagem de Sistemas*/
+.atividadeModelagem{
+    margin: 18px;
+    margin-left: 120px;
+}
+.modelagemAtividade1{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -460px;
+    margin-bottom: 20px;
+}
+.modelagemAtividade2{
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-top: -390px;
+    margin-bottom: 50px;
+}
+/*Internet das Coisas*/
+.conteudoGif{
+    display: flex;
+}
+.boxGif{
+    margin-left: 300px;
+}
+.textoGif{
+    font-size: 30px;
+    margin-top: 200px;
+}
